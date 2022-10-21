@@ -45,13 +45,14 @@ def predict():
         [float(first_interval), float(second_interval), float(third_interval)])
     actual_solar_radiation = actual_solar_radiation.reshape((1, 3, 1))
     predictions = model.predict(actual_solar_radiation)
+
+    output = predictions.tolist()
+
+    return render_template('index.html', prediction_text='Predicted GHI: Watts/m^2 {}'.format(output))
     
 
 
-    # response
-    return {
-        "prediction": predictions.tolist()      
-    }
+    
 
 
 
