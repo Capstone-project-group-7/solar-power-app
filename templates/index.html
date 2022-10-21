@@ -20,15 +20,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="background-color:powderblue; ">
     <div class="login">
-        <h1>Ten(10) Minutes Interval Solar Radiation Forecasting</h1>
+    <h1 style="text-align: left;">Ten(10) Minutes Interval Solar Radiation Forecasting</h1>
+    <a href="mainwindow.html" style="color: black; font-size: larger; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></a>
+    <br>
+    <br>
+
+    
     
          <!-- Main Input For Receiving Query to our ML -->
         <form action="{{ url_for('predict')}}"method="post">
-            <input type="text" name="first_interval" placeholder="1st Interval" required="required" />
-            <input type="text" name="second_interval" placeholder="2nd Interval" required="required" />
-            <input type="text" name="third_interval" placeholder="3rd Interval" required="required" />
+            <input type="text" name="first_interval" placeholder="Enter 1st Interval here" required="required" />
+            <input type="text" name="second_interval" placeholder="Enter 2nd Interval here" required="required" />
+            <input type="text" name="third_interval" placeholder="Enter 3rd Interval here" required="required" />
     
             <button class="btn btn-success">Predict GHI</button>
         </form>
@@ -39,7 +44,7 @@
     
      </div>
     
-
+     
 
 </body>
 </html>

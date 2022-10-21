@@ -48,7 +48,7 @@ def predict():
 
     output = predictions.tolist()
 
-    return render_template('index.html', prediction_text='Predicted GHI: Watts/m^2 {}'.format(output))
+    return render_template('index.html', prediction_text='Predicted GHI: Watts/m2 {}'.format(output))
     
 
 
