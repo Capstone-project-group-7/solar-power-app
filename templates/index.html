@@ -22,7 +22,10 @@
     
 </head>
 
-<body style="background-color:powderblue;">
+<body style="background-color:powderblue; @media screen (min-width: 768px) {
+    background-image: conic-gradient(red, yellow, blue)
+    
+}">
 <div class="container">
     <h1 style="text-align: center; ">Ten(10) Minutes Interval Solar Radiation Forecasting</h1>
     <br>
@@ -45,7 +48,7 @@
     border-radius: 1em;
     padding: 1em;
     margin: 1em;
-    display : flex">
+    display : inline-flexbox">
         
         <input type="text" name="first_interval" placeholder="Enter 1st Interval here" required="required" />
         <input type="text" name="second_interval" placeholder="Enter 2nd Interval here" required="required" />
