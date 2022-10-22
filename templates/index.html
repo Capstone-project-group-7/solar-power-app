@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="style.css">
     
 </head>
-
 <body style="background-color:powderblue; border: 0.1em solid;
 color: rgb(2, 5, 4);
 border-radius: 1em;
@@ -41,11 +40,13 @@ display : -webkit-inline-flex;" @media screen (min-width: 768px) {
     margin: 1em;
     display:inline-flexbox;">
         <h2 style="font-size: 1.5em;">Steps to Follow to Use this App:</h2>
-        <h3 style="font-size: 1em;">1. Enter the current actual solar radiation value on your GHI sensor</h3>
-        <h4 style="font-size: 1em;">2. After 10 minutes enter the value for the 2nd interval from your sensor</h4>
-        <h5 style="font-size: 1em;">3. After another 10 minutes enter the value for the 3rd interval from your sensor</h5>
-        <h6 style="font-size: 1em;">4. Click on the button to predict solar radiation at ten minutes inteval</h6>
+        <h3 style="font-size: 1em; font-style: italic; font-weight: 400;">1. Enter the current actual solar radiation value on your GHI sensor</h3><p></p>
+        <h4 style="font-size: 1em; font-style: italic; font-weight: 400;">2. After 10 minutes enter the value for the 2nd interval from your sensor</h4><p></p>
+        <h5 style="font-size: 1em; font-style: italic; font-weight: 400;">3. After another 10 minutes enter the value for the 3rd interval from your sensor</h5><p></p>
+        <h6 style="font-size: 1em; font-style: italic; font-weight: 400;">4. Click on the button to predict solar radiation at ten minutes inteval</h6>
     </div>
+    <br>
+    
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post" style="border: 0.1em solid;
@@ -55,9 +56,9 @@ display : -webkit-inline-flex;" @media screen (min-width: 768px) {
     margin: 1em;
     display : inline-flexbox;">
         
-        <input type="text" name="first_interval" placeholder="Enter 1st Interval here" required="required" />
-        <input type="text" name="second_interval" placeholder="Enter 2nd Interval here" required="required" />
-        <input type="text" name="third_interval" placeholder="Enter 3rd Interval here" required="required" />
+        <input type="text" name="first_interval" placeholder="Enter 1st Interval here" required="required" /><p></p>
+        <input type="text" name="second_interval" placeholder="Enter 2nd Interval here" required="required" /><p></p>
+        <input type="text" name="third_interval" placeholder="Enter 3rd Interval here" required="required" /><p></p>
         <button class="btn btn-success">Predict GHI</button>
     </form>
     {{ prediction_text }}
@@ -74,8 +75,8 @@ display : -webkit-inline-flex;" @media screen (min-width: 768px) {
     padding: 1em;
     margin: 1em;
     display : flex">
-        <h3 style="text-align: centre; ">Roofing with Solar Panels at the University of Johannesburg parking Lot</h3>
-        <img src="Solar Panels at UJ Parking space.jpg" width="700", height="315">
+        <h3 style="font-size: 1.5em; font-style: italic;">Roofing with Solar Panels at the University of Johannesburg parking Lot</h3>
+        <img src="Solar Panels at UJ Parking space.jpg" width="700", height="250">
         </div>
        
 
@@ -85,8 +86,8 @@ display : -webkit-inline-flex;" @media screen (min-width: 768px) {
     padding: 1em;
     margin: 1em;
     display : flex" >
-         <h3>Smartflower Solar panels</h3>
-        <img src="smartflower-solar-power.png" width="700", height="315">
+         <h3 style="font-size: 1.5em; font-style: italic;">Smartflower Solar panels</h3>
+        <img src="smartflower-solar-power.png" width="700", height="250">
         </div>
 
     <div class="solar3" style="border: 0.1em solid;
@@ -95,8 +96,8 @@ display : -webkit-inline-flex;" @media screen (min-width: 768px) {
     padding: 1em;
     margin: 1em;
     display : flex">
-         <h3>Solar Farm</h3>
-         <img src="energy-concepts-solar.jpg" width="700", height="315">
+         <h3 style="font-size: 1.5em; font-style: italic;">Solar Farm</h3>
+         <img src="energy-concepts-solar.jpg" width="700", height="250">
         </div>
 
  </div>  
