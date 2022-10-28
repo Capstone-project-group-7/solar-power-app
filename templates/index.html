@@ -1,110 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Power Forecasting</title>
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="solar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Code Pro">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body style="background-color:powderblue; border: 0.1em solid;
-color: rgb(2, 5, 4);
-border-radius: 1em;
-padding: 1em;
-margin: 1em;
-display : -webkit-inline-flex;" @media screen (min-width: 768px) {
-    background-image: conic-gradient(red, yellow, blue)
-    
-}>
-<div class="container">
-    <h1 style="text-align: center; ">Ten(10) Minutes Interval Solar Radiation Forecasting</h1>
-    <br>
-    <div class="container" style="border: 0.1em solid;
-    color: rgb(3, 4, 3);
-    border-radius: 1em;
-    padding: 1em;
-    margin: 1em;
-    display:inline-flexbox;">
-        <h2 style="font-size: 1.5em;">Steps to Follow to Use this App:</h2>
-        <h3 style="font-size: 1em; font-style: italic; font-weight: 400;">1. Enter the current actual solar radiation value on your GHI sensor</h3><p></p>
-        <h4 style="font-size: 1em; font-style: italic; font-weight: 400;">2. After 10 minutes enter the value for the 2nd interval from your sensor</h4><p></p>
-        <h5 style="font-size: 1em; font-style: italic; font-weight: 400;">3. After another 10 minutes enter the value for the 3rd interval from your sensor</h5><p></p>
-        <h6 style="font-size: 1em; font-style: italic; font-weight: 400;">4. Click on the button to predict solar radiation at ten minutes inteval</h6>
-    </div>
-    <br>
-    
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post" style="border: 0.1em solid;
-    color: rgb(2, 5, 4);
-    border-radius: 1em;
-    padding: 1em;
-    margin: 1em;
-    display : inline-flexbox;">
-        
-        <input type="text" name="first_interval" placeholder="Enter 1st Interval here" required="required" /><p></p>
-        <input type="text" name="second_interval" placeholder="Enter 2nd Interval here" required="required" /><p></p>
-        <input type="text" name="third_interval" placeholder="Enter 3rd Interval here" required="required" /><p></p>
-        <button class="btn btn-success">Predict GHI</button>
-    </form>
-    {{ prediction_text }}
-</div>
-
-<br>
-    
-<div class="container" >
- <div class="solar">
-
-    <div class="solar1" style="border: 0.1em solid;
-    color: rgb(3, 4, 3);
-    border-radius: 1em;
-    padding: 1em;
-    margin: 1em;
-    display : flex">
-        <h3 style="font-size: 1.5em; font-style: italic;">Roofing with Solar Panels at the University of Johannesburg parking Lot</h3>
-        <img src="Solar Panels at UJ Parking space.jpg" width="700", height="250">
+<body>
+    <!-- navbar sections starts  -->
+    <header class="header">
+        <div class="logo">
+            <img src="solar.png" alt="logo-solar" width="50">
         </div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About us</a>
+            <a href="#predict">Predict</a>
+            <a href="#footer">Contact</a>
+            <a href="#" class="btn">log in</a>
+        </nav>
+
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </header>
+    <!-- navbar sections starts  -->
+ 
+    <!-- home section stars  -->
+
+    <section class="home" id="home">
+        <div class="content">
+            <h1>Clean and safe energy forcasting,The solar energy</h1>
+            <p>Predict the energy to be produced for solar plants. Solar energy, the smartest way to power your farm</p>
+            
+        </div>
+
+        <div class="image">
+            <img src="energy-concepts-solar.jpg" alt="solar-image" width="50">
+        </div>
+    </section>
+
+    <!-- home section ends -->
+    <!-- features section starts  -->
+    <section class="features" id="features">
+        <div class="heading">
+            <h1>Features</h1>
+            <p>Our aim is to use the LSTM model to accurately predict solar irradiance to minimize unplanned shutdowns and fluctuations in solar power</p>
+        </div>
+
+        <div class="row">
+            <!-- 1 Tab  -->
+            <div class="image">
+                <img src="smartflower-solar-power.png" alt="illustration-features-tab-1">
+            </div>
+
+            <div class="content">
+                <h1>Forcast in one click</h1>
+                <p>The prediction is done within seconds. Forcasting based on relevant data in the past by using techniques and methods in analysing the data</p>
+                
+                
+            </div>
+            
+            <!-- 1 Tab  -->
+
+            <!-- 2 Tab  -->
+          
+        <section class="about" id="about">
+            <div class="content">
+                <h1>Solar forcasting About us</h1>
+                <p>Our model will help you predict the next solar energy to be produced in your farm at 5-minutes and 10-minutes time intervals in Johannersburg</p>
+            </div>
+    
+    
+            <div class="row">
+                <!-- 1 Tab  -->
+                <div class="image">
+                    <img src="pre.jpeg" alt="illustration-features-tab-1">
+                </div>
+    
+    
+                <div class="content">
+                    <h1>Forcast in one click</h1>
+                    <p>The prediction is done within seconds. Forcasting based on relevant data in the past by using techniques and methods in analysing the data</p>
+                    
+    
+                    
+                </div>
        
-
-    <div class="solar2" style="border: 0.1em solid;
-    color: rgb(4, 5, 4);
-    border-radius: 1em;
-    padding: 1em;
-    margin: 1em;
-    display : flex" >
-         <h3 style="font-size: 1.5em; font-style: italic;">Smartflower Solar panels</h3>
-        <img src="smartflower-solar-power.png" width="700", height="250">
-        </div>
-
-    <div class="solar3" style="border: 0.1em solid;
-    color: rgb(9, 12, 11);
-    border-radius: 1em;
-    padding: 1em;
-    margin: 1em;
-    display : flex">
-         <h3 style="font-size: 1.5em; font-style: italic;">Solar Farm</h3>
-         <img src="energy-concepts-solar.jpg" width="700", height="250">
-        </div>
-
- </div>  
-     
-    </div>
     
-     
+    
+        
 
+   
+        </section>
+
+        <section class="predict" id="predict">
+            <div class="content">
+                <h1>Make your predictions here</h1>
+
+                <p><small>To check the 5-min solar energy prediction, click <a href="https://solar-power-app4.herokuapp.com/" style="color: orange;">here</a></small></p>
+                <p><small>To check the 10-min solar energy prediction, click <a href="https://solar-power-app2.herokuapp.com/" style="color: orange;">here</a></small></p>
+                
+    
+                
+            </div>
+    
+    
+            <div class="image">
+                <img src="energy-concepts-solar.jpg" alt="solar-image" width="30">
+            </div>
+        </section>
+        
+        
+              
+                        
+        
+                        
+                    <!-- footer section starts  -->
+
+   <section class="footer" id="footer">
+       <div class="box-container">
+           <div class="box">
+               <h3>quick links</h3>
+               <a href="#"><i class="fas fa-chevron-right"></i>home</a>
+               <a href="#"><i class="fas fa-chevron-right"></i>features</a>
+               <a href="#"><i class="fas fa-chevron-right"></i>about us</a>
+               <a href="#"><i class="fas fa-chevron-right"></i>contact</a>
+            </div>
+            
+            
+           <div class="box">
+               <h3>contact info</h3>
+               <a href="#"><i class="fas fa-phone"></i>+2782-456-7891</a>
+               <a href="#"><i class="fas fa-phone"></i>+2711-222-3333</a>
+               <a href="#"><i class="fas fa-envelope"></i>forcast@solar.com</a>
+               <a href="#"><i class="fas fa-map-marker-alt"></i>Johannersburg, South Africa - 2001</a>
+           </div>
+
+           <div class="box">
+               <h3>follow us</h3>
+               <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+               <a href="#"><i class="fab fa-twitter"></i>facebook</a>
+               <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+               <a href="#"><i class="fab fa-linkedin"></i>linkedIn</a>
+               
+           </div>
+       </div>
+       <div class="credit">created by
+           <a href="#"></a><span>Capstone Team 7</span> | All rights reserved.</a>
+       </div>
+   </section>
+
+    <!-- footer section ends -->
+
+    <script src="./app.py"></script>
 </body>
 </html>

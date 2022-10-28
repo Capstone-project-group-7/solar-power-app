@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <template x-if="NAVIGATE ==='SignUp'">
+        
+        <table>
+            <tr>
+                <td>
+                    <form autocomplete="off" onsubmit="onFormSubmit()">
+            
+                        <div class="input-control">
+                            <label for="username">Username</label>
+                            <input id="username" name="username" type="text">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="text">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <label for="password">Password</label>
+                            <input id="password"name="password" type="password">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <label for="location">Location</label>
+                            <input id="location"name="location" type="text">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input-control">
+                            <label for="password2">Password again</label>
+                            <input id="password2"name="password2" type="password">
+                            <div class="error"></div>
+                        </div>
+    
+                        <div class="form_action--button">
+                            <input type="submit" value="Submit" x-on:click="signup(), NAVIGATE = 'Home'">
+                            <input type="reset" value="Reset">
+                        </div>
+                        <p class="link">Do have an account<br>
+                        <a href="#" ><button type="button" class="btn btn-link" x-on:click="NAVIGATE ='login'">login</button>
+                    </form>
+    
+                    <td>
+                        <table class="list" id="storeList">
+                            <thead>
+                                <tr>
+                                    <th>Username</th><br><br>
+                                    <th>Email</th>
+                                    <th>location</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+    
+                            </tbody>
+                        </table>
+                    </td>
+                </td>
+            </tr>
+        </table>
+    </template>
+</body>
+</html>
