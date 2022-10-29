@@ -3,3 +3,5 @@ numpy
 pandas
 gunicorn
 flask_cors
+sqlite3
+tensorflow-cpu

@@ -1,173 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
+​
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webpage Design</title>
     <link rel="stylesheet" href="css/style.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="./app.py"></script>
+​
+​
+​
+    <script>
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+        var menu = document.getElementById("menu")
+        sideNav.style.right = "-250px";
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+                menu.src = "../static/images/hp/close.png"
+            } else {
+                sideNav.style.right = "-250px"
+                menu.src = "../static/images/hp/menu.png"
+            }
+        }
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });
+    </script>
+​
+    
 </head>
-
+​
 <body>
-
-    <template x-if=" NAVIGATE==='login'">
-        <div class="main">
-            <div class="navbar">
-                <div class="icon">
-                    <h2 class="logo">Solar energy</h2>
-                    <img src="solar-power-plant.png" alt="" width="50">
-                </div>
-            </div>
-            <div class="form">
-                <form action="" name="myForm" method="post">
-                <h1>Login</h1>
-                <input type="text" name="username" placeholder="Enter username" id="">
-                <input type="password" name="password" placeholder="Enter password" id="">
-                <button class="btnn" x-on:click="myFunction()"><a href="#">Login</a></button>
-                
-                <p class="link">Don't have an account<br>
-                <a href="#" ><button type="button" class="btn btn-link" x-on:click="NAVIGATE ='SignUp'">Sign up</button>
-                
-                <p class="liw">Log in with</p>
-    
-                <div class="icons">
-                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-google"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
-                </div>
-              </form>
-    
-            </div>
-        <br><br>
-        </div>
-        </template>
-
-        <template x-if="NAVIGATE ==='SignUp'">
-        
-            <table>
-                <tr>
-                    <td>
-                        <form autocomplete="off" onsubmit="onFormSubmit()">
-                
-                            <div class="input-control">
-                                <label for="username">Username</label>
-                                <input id="username" name="username" type="text">
-                                <div class="error"></div>
-                            </div>
-                            <div class="input-control">
-                                <label for="email">Email</label>
-                                <input id="email" name="email" type="text">
-                                <div class="error"></div>
-                            </div>
-                            <div class="input-control">
-                                <label for="password">Password</label>
-                                <input id="password"name="password" type="password">
-                                <div class="error"></div>
-                            </div>
-                            <div class="input-control">
-                                <label for="location">Location</label>
-                                <input id="location"name="location" type="text">
-                                <div class="error"></div>
-                            </div>
-                            <div class="input-control">
-                                <label for="password2">Password again</label>
-                                <input id="password2"name="password2" type="password">
-                                <div class="error"></div>
-                            </div>
-        
-                            <div class="form_action--button">
-                                <input type="submit" value="Submit" x-on:click="signup(), NAVIGATE = 'Home'">
-                                <input type="reset" value="Reset">
-                            </div>
-                            <p class="link">Do have an account<br>
-                            <a href="#" ><button type="button" class="btn btn-link" x-on:click="NAVIGATE ='login'">login</button>
-                        </form>
-        
-                        <td>
-                            <table class="list" id="storeList">
-                                <thead>
-                                    <tr>
-                                        <th>Username</th><br><br>
-                                        <th>Email</th>
-                                        <th>location</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-        
-                                </tbody>
-                            </table>
-                        </td>
-                    </td>
-                </tr>
-            </table>
-        </template>
-
-        
-
-
     <!-- navbar sections starts  -->
     <header class="header">
         <div class="logo">
             <img src="solar.png" alt="logo-solar" width="50">
         </div>
-
+​
         <nav class="navbar">
             <a href="#home">Home</a>
             <a href="#features">Features</a>
             <a href="#about">About us</a>
-            <a href="#predict">Predict</a>
+            <a href="#predict">Predict</a> <!--On-click takes you to the prediction page-->
             <a href="#footer">Contact</a>
-            <a href="#" class="btn">log in</a>
+            <a href="{{url_for('login')}}" class="btn">log in</a> <!--On-click takes you to the login page-->
         </nav>
-
+​
+​
         <div class="fas fa-bars" id="menu-btn"></div>
     </header>
     <!-- navbar sections starts  -->
- 
+​
+   
     <!-- home section stars  -->
-
+​
     <section class="home" id="home">
         <div class="content">
             <h1>Clean and safe energy forcasting,The solar energy</h1>
-            <p>Predict the energy to be generated by solar plants. Solar energy, the smartest way to generate clean, affordable, and reliable Electrical Energy</p>
+            <p>Predict the energy to be produced for solar plants. Solar energy, the smartest way to power your farm</p>
+​
             
         </div>
-
+​
+​
         <div class="image">
             <img src="energy-concepts-solar.jpg" alt="solar-image" width="50">
         </div>
     </section>
-
+​
     <!-- home section ends -->
+​
     <!-- features section starts  -->
+​
     <section class="features" id="features">
         <div class="heading">
             <h1>Features</h1>
-            <p>Our aim is to use the LSTM deep learning model to accurately predict solar irradiance to minimize unplanned shutdowns and fluctuations in solar power</p>
+            <p>Our aim is to use the LSTM model to accurately predict solar irradiance to minimize unplanned shutdowns and fluctuations in solar power</p>
         </div>
-
+​
+​
         <div class="row">
             <!-- 1 Tab  -->
             <div class="image">
                 <img src="smartflower-solar-power.png" alt="illustration-features-tab-1">
             </div>
-
+​
+​
             <div class="content">
                 <h1>Forcast in one click</h1>
                 <p>The prediction is done within seconds. Forcasting based on relevant data in the past by using techniques and methods in analysing the data</p>
                 
+​
                 
             </div>
             
+​
             <!-- 1 Tab  -->
-
+​
             <!-- 2 Tab  -->
           
+​
         <section class="about" id="about">
             <div class="content">
                 <h1>Solar forcasting About us</h1>
@@ -178,7 +115,7 @@
             <div class="row">
                 <!-- 1 Tab  -->
                 <div class="image">
-                    <img src="solar-picture.jpg" alt="illustration-features-tab-1" width="600" height="250">
+                    <img src="pre.jpeg" alt="illustration-features-tab-1">
                 </div>
     
     
@@ -193,14 +130,14 @@
     
     
         
-
+​
    
         </section>
-
+​
         <section class="predict" id="predict">
             <div class="content">
                 <h1>Make your predictions here</h1>
-
+​
                 <p><small>To check the 5-min solar energy prediction, click <a href="https://solar-power-app4.herokuapp.com/" style="color: orange;">here</a></small></p>
                 <p><small>To check the 10-min solar energy prediction, click <a href="https://solar-power-app2.herokuapp.com/" style="color: orange;">here</a></small></p>
                 
@@ -210,7 +147,7 @@
     
     
             <div class="image">
-                <img src="energy-concepts-solar.jpg" alt="solar-image" width="600" height="250">
+                <img src="energy-concepts-solar.jpg" alt="solar-image" width="30">
             </div>
         </section>
         
@@ -220,7 +157,7 @@
         
                         
                     <!-- footer section starts  -->
-
+​
    <section class="footer" id="footer">
        <div class="box-container">
            <div class="box">
@@ -232,6 +169,7 @@
             </div>
             
             
+​
            <div class="box">
                <h3>contact info</h3>
                <a href="#"><i class="fas fa-phone"></i>+2782-456-7891</a>
@@ -239,7 +177,7 @@
                <a href="#"><i class="fas fa-envelope"></i>forcast@solar.com</a>
                <a href="#"><i class="fas fa-map-marker-alt"></i>Johannersburg, South Africa - 2001</a>
            </div>
-
+​
            <div class="box">
                <h3>follow us</h3>
                <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
@@ -249,13 +187,17 @@
                
            </div>
        </div>
+​
+​
        <div class="credit">created by
-           <a href="#"></a><span>Capstone Team 7</span> | All rights reserved.</a>
+           <a href="#"></a><span>Capstone Team 7</span> | all rights reserved</a>
        </div>
    </section>
-
+​
     <!-- footer section ends -->
-
-    <script src="./app.py"></script>
+​
+​
+    
 </body>
+​
 </html>
