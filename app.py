@@ -96,12 +96,12 @@ def register():
             
             con.close()
 
-    return render_template('login.html')
+    return render_template('register.html')
 # route when history is clicked - navigates to history page
 
 @app.route('/history', methods=['GET', 'POST'])
 def history():
-    return render_template('history')
+    return render_template('register.html')
 
 
 
