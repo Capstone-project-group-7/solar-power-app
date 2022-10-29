@@ -46,23 +46,29 @@ def predict():
 def login():
     return render_template('login.html')
 # route when log out clicked - rediracts to home page
+
 @app.route('/logout')
 def logout():
     session.pop('loggedin', None)
     session.pop('userid', None)
     session.pop('email', None)
     return redirect(url_for('index.html'))
+
 # route when sign up clicked - rediracts to register page
 @app.route('/register', methods =['GET', 'POST'])
 def register():
     return render_template('register.html')
+
 # route when log in is successful - navigates to main application page
 @app.route('/main', methods=['GET', 'POST'])
 def main():
     return render_template('main.html')
 # route when history is clicked - navigates to history page
+
 @app.route('/history', methods=['GET', 'POST'])
 def history():
     return render_template('history.html')
+
+    
 if __name__ == "__main__":
     app.run(debug=True)
