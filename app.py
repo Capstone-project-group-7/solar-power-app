@@ -29,7 +29,6 @@ CORS(app)
 @app.route('/')
 def home():
     return render_template('index.html')
-​
 # Radiation model api endpoint http://127.0.0.1:8000/api/model/radiation
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -49,7 +48,6 @@ def predict():
     predictions = model.predict(actual_solar_radiation)*0.75*number_of_solar_panels*area_of_panel*yield_of_one_panel/(1000)
     output = predictions.tolist()
     return render_template('index.html', prediction_text='Predicted Energy: kWh {}'.format(output))
-​
 # login end point
 @app.route('/login', methods=['POST','GET'])
 def login():
@@ -62,7 +60,6 @@ def login():
         cur.execute("select * from customer where name=? and password=?",(name,password))
         data=cur.fetchone()
 
-​
         if data:
             session["name"]=data["name"]
             session["password"]=data["password"]
@@ -70,7 +67,6 @@ def login():
         else:
             flash("Username and Password Mismatch","danger")
             return redirect(url_for("login"))
-​
 # route when log out clicked - rediracts to home page
 @app.route('/logout')
 def logout():
