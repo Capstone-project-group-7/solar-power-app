@@ -456,8 +456,7 @@ html{
 .footer .box-container .box a:hover i{
     padding-right:1rem;
 }
-​
-​
+
 .footer .credit{
     padding: 1rem;
     padding-top: 2rem;
@@ -467,8 +466,7 @@ html{
     color: #000;
     border-top: .1rem solid rgba(0, 0, 0, .1);
 }
-​
-​
+
 .footer .credit span{
     color: var(--Soft-Red);
     cursor: pointer;

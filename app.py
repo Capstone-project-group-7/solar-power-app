@@ -5,28 +5,26 @@ import tensorflow as tf
 import pandas as pd
 import numpy as np
 from flask import Flask, request, jsonify, render_template,flash, redirect, url_for, session
-​
-​
+
 app = Flask(__name__)
 app.secret_key="1234"
-​
+
 con=sqlite3.connect("database.db")
 con.execute("create table if not exists customer(pid integer primary key,name text,mail text,password integer unique,address text)")
 con.close()
-​
+
 # enable cors
 CORS(app)
-​
+
 # load the models from disk
 #filename2 = r'model2.h5'
-​
-​
+
 # Loading a saved model
 #from numpy import loadtxt
 #from tensorflow.keras.models import load_model
-​
+
 #model = load_model(filename2)
-​
+
 # Default home page
 @app.route('/')
 def home():
@@ -54,7 +52,6 @@ def predict():
 ​
 # login end point
 @app.route('/login', methods=['POST','GET'])
-​
 def login():
     if request.method=='POST':
         name=request.form['name']
@@ -64,6 +61,7 @@ def login():
         cur=con.cursor()
         cur.execute("select * from customer where name=? and password=?",(name,password))
         data=cur.fetchone()
+
 ​
         if data:
             session["name"]=data["name"]
@@ -71,7 +69,7 @@ def login():
             return redirect("index.html")
         else:
             flash("Username and Password Mismatch","danger")
-    return redirect(url_for("login"))
+            return redirect(url_for("login"))
 ​
 # route when log out clicked - rediracts to home page
 @app.route('/logout')
@@ -101,15 +99,16 @@ def register():
             return redirect(url_for("login"))
             
             con.close()
-​
+
     return render_template('login.html')
 # route when history is clicked - navigates to history page
+
 @app.route('/history', methods=['GET', 'POST'])
 def history():
     return render_template('history')
-​
-​
-​
-​
+
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
