@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="../static/style.css">-->
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
@@ -25,8 +24,9 @@
     <link href='https://fonts.googleapis.com/css?family=Black Ops One' rel='stylesheet'>
 </head>
 <body style="">
+  
     <div class="container" style="
-    background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
+    background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(../static/energy-concepts-solar.jpg);
     border: 0.1em solid;
     color: rgb(3, 4, 3);
     border-radius: 1em;
@@ -34,8 +34,12 @@
     width: 100% !important;
     margin: 1em;
     font-family: Black Ops One;">
-        <h1 class="text-warning text-center" style="font-family: Trirong;">Ten(10) Minutes Interval Solar Energy Forecasting</h1>
-        <h2 class="text-warning text-center" style="font-family: Sofia">Enter solar radiation(GHI) below:</h2>
+    <!--ADDED STYLE AND CHANGED FONT-->
+        <h1 class="text-black text-center" style="font-family: poppins;
+          font-size: 1.7rem;
+          color: var(--Grayish-Blue);
+          ">Ten(10) Minutes Interval Solar Energy Forecasting</h1>
+        <h2 class="text-black text-center" style="font-family: Sofia">Enter solar radiation(GHI) below:</h2>
      <!-- Main Input For Receiving Query to our ML -->
      <div class="">
     <form action="{{ url_for('predict')}}"method="post" class="row g-5">
@@ -61,25 +65,25 @@
             <div class="mb-3 row">
                 <label for="capacity_of_one_panel" class="col-3 rounded col-form-label border border-warning p-2 mb-2 border-opacity-75 text-warning">Capacity of one panel:</label>
                 <div class="col-sm-2">
-                  <input type="text" class="form-control border-warning" id="capacity_of_one_panel" name="capacity_of_one_panel" required="required">
+                  <input type="text" class="form-control border-warning" id="capacity_of_one_panel" name="capacity_of_one_panel" required="required" placeholder="Watts">
                 </div>
               </div>
               <div class="mb-3 row">
                 <label for="number_of_solar_panels" class="col-3 rounded col-form-label border border-warning p-2 mb-2 border-opacity-75 text-warning">Enter area of a panel:</label>
                 <div class="col-sm-2">
-                  <input type="text" class="form-control border-warning" id="number_of_solar_panels" name="number_of_solar_panels" required="required">
+                  <input type="text" class="form-control border-warning" id="number_of_solar_panels" name="number_of_solar_panels" required="required" placeholder="Meters">
                 </div>
               </div>
               <div class="mb-3 row">
                 <label for="area_of_panels" class="col-3 rounded col-form-label border border-warning p-2 mb-2 border-opacity-75 text-warning">Enter number of panels:</label>
                 <div class="col-sm-2">
-                  <input type="text" class="form-control border-warning" id="area_of_panels" name="area_of_panel" required="required">
+                  <input type="text" class="form-control border-warning" id="area_of_panels" name="area_of_panel" required="required" placeholder="">
                 </div>
               </div>
             </div>
         <button type="submit" class="btn btn-warning btn-block btn-medium border-warning p-3 mb-lg-4">Predict Solar Energy</button>
     </form>
-    <span class="border border-warning border-opacity-75 p-2 rounded text-black">{{ prediction_text }}</span>
+    <span class="border border-warning border-opacity-75 p-2 rounded text-black">{{ prediction }}</span>
    </div>
 </div>
 </body>

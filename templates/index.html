@@ -1,303 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-​
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Energy Forecasting</title>
+    <title>Webpage Design</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="./app.py"></script>
-​
-​
-​
-    <script>
-        var menuBtn = document.getElementById("menuBtn")
-        var sideNav = document.getElementById("sideNav")
-        var menu = document.getElementById("menu")
-        sideNav.style.right = "-250px";
-        menuBtn.onclick = function () {
-            if (sideNav.style.right == "-250px") {
-                sideNav.style.right = "0";
-                menu.src = "../static/images/hp/close.png"
-            } else {
-                sideNav.style.right = "-250px"
-                menu.src = "../static/images/hp/menu.png"
-            }
-        }
-        var scroll = new SmoothScroll('a[href*="#"]', {
-            speed: 1000,
-            speedAsDuration: true
-        });
-    </script>
-​
-    
 </head>
-​
-<body style="">
-
-    <div class="container" style="
-    background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
-    border: 0.1em solid;
-    color: rgb(3, 4, 3);
-    border-radius: 1em;
-    padding: 1em;
-    width: 100% !important;
-    margin: 1em;
-    font-family: Black Ops One;">
+<body>
     <!-- navbar sections starts  -->
     <header class="header">
-        <div class="logo" style="
-        background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
-        border: 0.1em solid;
-        color: rgb(3, 4, 3);
-        border-radius: 1em;
-        padding: 1em;
-        width: 90% !important;
-        margin: 1em;
-        font-family: Black Ops One;">
-            <img src="solar.png" alt="logo-solar" width="50">
+        <div class="logo">
+            <img src="../static/solar.png" alt="logo-solar" width="50">
         </div>
-​
         <nav class="navbar">
             <a href="#home">Home</a>
             <a href="#features">Features</a>
             <a href="#about">About us</a>
-            <a href="#predict">Predict</a> <!--On-click takes you to the prediction page-->
+            <a href="#predict">Predict</a>
             <a href="#footer">Contact</a>
-            <a href="{{url_for('login')}}" class="btn">log in</a> <!--On-click takes you to the login page-->
+            <a href="#" class="btn">log in</a>
         </nav>
-​
-​
         <div class="fas fa-bars" id="menu-btn"></div>
     </header>
     <!-- navbar sections starts  -->
-​
-   
     <!-- home section stars  -->
-​
     <section class="home" id="home">
-        <div class="content" style="
-        background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
-        border: 0.1em solid;
-        color: rgb(3, 4, 3);
-        border-radius: 1em;
-        padding: 1em;
-        width: 90% !important;
-        margin: 1em;
-        font-family: Black Ops One;">
-            <h1>Clean and safe energy forcasting, the Solar Energy</h1>
-            <p>Predict the energy to be produced for solar plants. Solar energy, the smartest way to power your homes and offices with clean, affordable, and reliable electricity!</p>
-​
-            
+        <div class="content">
+            <h1>Clean and safe energy forcasting,The solar energy</h1>
+            <p>Predict the energy to be produced for solar plants. Solar energy, the smartest way to power your farm</p>
         </div>
-​
-​
         <div class="image">
-            <img src="energy-concepts-solar.jpg" alt="solar-image" width="50">
+            <img src="../static/energy-concepts-solar.jpg" alt="solar-image" width="50">
         </div>
     </section>
-​
     <!-- home section ends -->
-​
     <!-- features section starts  -->
-​
     <section class="features" id="features">
-        <div class="heading" style="
-        background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
-        border: 0.1em solid;
-        color: rgb(3, 4, 3);
-        border-radius: 1em;
-        padding: 1em;
-        width: 90% !important;
-        margin: 1em;
-        font-family: Black Ops One;">>
+        <div class="heading">
             <h1>Features</h1>
-            <p>Our aim is to use the LSTM model to accurately predict solar irradiance to minimize unplanned shutdowns and the effects of fluctuations in solar radiation</p>
+            <p>Our aim is to use the LSTM model to accurately predict solar irradiance to minimize unplanned shutdowns and fluctuations in solar power</p>
         </div>
-​
-​
         <div class="row">
             <!-- 1 Tab  -->
             <div class="image">
-                <img src="smartflower-solar-power.png" alt="illustration-features-tab-1">
+                <img src="../static/smartflower-solar-power.png" alt="illustration-features-tab-1">
             </div>
-​
-​
-            <div class="content" style="
-            background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
-            border: 0.1em solid;
-            color: rgb(3, 4, 3);
-            border-radius: 1em;
-            padding: 1em;
-            width: 90% !important;
-            margin: 1em;
-            font-family: Black Ops One;">
+            <div class="content">
                 <h1>Forcast in one click</h1>
-                <p>The prediction is done within seconds. Forcasting is based on relevant historical data by using the LSTM algorithm in analysing the patterns in the data</p>
-                
-​
-                
+                <p>The prediction is done within seconds. Forcasting based on relevant data in the past by using techniques and methods in analysing the data</p>
             </div>
-            
-​
             <!-- 1 Tab  -->
-​
             <!-- 2 Tab  -->
-          
-​
         <section class="about" id="about">
-            <div class="content" style="
-            background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
-            border: 0.1em solid;
-            color: rgb(3, 4, 3);
-            border-radius: 1em;
-            padding: 1em;
-            width: 90% !important;
-            margin: 1em;
-            font-family: Black Ops One;">>
+            <div class="content">
                 <h1>Solar forcasting About us</h1>
-                <p>Our model will help you predict the next solar energy to be produced in your solar plants at 5-minutes and 10-minutes time intervals in Johannersburg</p>
+                <p>Our model will help you predict the next solar energy to be produced in your farm at 5-minutes and 10-minutes time intervals in Johannersburg</p>
             </div>
-    
-    
-            <div class="row">
                 <!-- 1 Tab  -->
                 <div class="image">
-                    <img src="pre.jpeg" alt="illustration-features-tab-1">
+                    <img src="../static/pre.jpeg" alt="illustration-features-tab-2">
                 </div>
-    
-    
-                <div class="content" style="
-                background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
-                border: 0.1em solid;
-                color: rgb(3, 4, 3);
-                border-radius: 1em;
-                padding: 1em;
-                width: 90% !important;
-                margin: 1em;
-                font-family: Black Ops One;">>
-                    <h1>Forcast in one click</h1>
-                    <p>The prediction is done within seconds. Forcasting is based on relevant historical data by using the LSTM algorithm in analysing the patterns in the data</p>
-                    
-    
-                    
-                </div>
-       
-    
-    
-        
-​
-   
-        </section>
-​
-        <section class="predict" id="predict">
-            <div class="content" style="
-            background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
-            border: 0.1em solid;
-            color: rgb(3, 4, 3);
-            border-radius: 1em;
-            padding: 1em;
-            width: 90% !important;
-            margin: 1em;
-            font-family: Black Ops One;">
+                </section>
+            <section class="predict" id="predict">
+            <div class="content">
                 <h1>Make your predictions here</h1>
-​
                 <p><small>To check the 5-min solar energy prediction, click <a href="https://solar-power-app4.herokuapp.com/" style="color: orange;">here</a></small></p>
                 <p><small>To check the 10-min solar energy prediction, click <a href="https://solar-power-app2.herokuapp.com/" style="color: orange;">here</a></small></p>
-                <p><small>To predict solar radiation at 5-minutes intervals, click <a href="https://solar-power-app3.herokuapp.com/" style="color: rgb(255, 0, 17);">here</a></small></p>
-                <p><small>To predict solar radiation at 10-minutes intervals, click <a href="https://solar-power-app1.herokuapp.com/" style="color: rgb(255, 0, 0);">here</a></small></p>
-                
-    
-                
             </div>
-    
-    
             <div class="image">
-                <img src="energy-concepts-solar.jpg" alt="solar-image" width="30">
+                <img src="../static/energy-concepts-solar.jpg" alt="solar-image" width="30">
             </div>
         </section>
-        
-        
-              
-                        
-        
-                        
-                    <!-- footer section starts  -->
-​
-   <section class="footer" id="footer">
+        <section class="footer" id="footer">
        <div class="box-container">
-           <div class="box" style="
-           background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
-           border: 0.1em solid;
-           color: rgb(3, 4, 3);
-           border-radius: 1em;
-           padding: 1em;
-           width: 90% !important;
-           margin: 1em;
-           font-family: Black Ops One;">
+           <div class="box">
                <h3>quick links</h3>
                <a href="#"><i class="fas fa-chevron-right"></i>home</a>
                <a href="#"><i class="fas fa-chevron-right"></i>features</a>
                <a href="#"><i class="fas fa-chevron-right"></i>about us</a>
                <a href="#"><i class="fas fa-chevron-right"></i>contact</a>
             </div>
-            
-            
-​
-           <div class="box" style="
-           background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
-           border: 0.1em solid;
-           color: rgb(3, 4, 3);
-           border-radius: 1em;
-           padding: 1em;
-           width: 90% !important;
-           margin: 1em;
-           font-family: Black Ops One;">
-               <h3>Contact Info</h3>
+           <div class="box">
+               <h3>contact info</h3>
                <a href="#"><i class="fas fa-phone"></i>+2782-456-7891</a>
                <a href="#"><i class="fas fa-phone"></i>+2711-222-3333</a>
                <a href="#"><i class="fas fa-envelope"></i>forcast@solar.com</a>
                <a href="#"><i class="fas fa-map-marker-alt"></i>Johannersburg, South Africa - 2001</a>
            </div>
-​
-           <div class="box" style="
-           background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
-           border: 0.1em solid;
-           color: rgb(3, 4, 3);
-           border-radius: 1em;
-           padding: 1em;
-           width: 90% !important;
-           margin: 1em;
-           font-family: Black Ops One;">
+           <div class="box">
                <h3>follow us</h3>
                <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
                <a href="#"><i class="fab fa-twitter"></i>facebook</a>
                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
                <a href="#"><i class="fab fa-linkedin"></i>linkedIn</a>
-               
            </div>
        </div>
-​
-​
-       <div class="credit" style="
-       background: linear-gradient(to top, rgba(4, 45, 218, 0.5)50%, rgba(36, 8, 189, 0.5)50%), url(energy-concepts-solarresized.png);
-       border: 0.1em solid;
-       color: rgb(3, 4, 3);
-       border-radius: 1em;
-       padding: 1em;
-       width: 90% !important;
-       margin: 1em;
-       font-family: Black Ops One;">created by
-           <a href="#"></a><span>RadiationGurus</span> | All Rights Reserved.</a>
+       <div class="credit">created by
+           <a href="#"></a><span>Capstone Team 7</span> | all rights reserved</a>
        </div>
    </section>
-​
     <!-- footer section ends -->
-​
-​
-    
+    <script src="js/main.js"></script>
 </body>
-​
 </html>
