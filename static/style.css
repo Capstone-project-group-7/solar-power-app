@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
-​
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -12,31 +11,24 @@
     color: #000;
     text-decoration: none;
 }
-​
 ::selection{
     background-color: var(--Soft-Red);
     color: #fff;
 }
-​
-​
 ::-webkit-scrollbar{
     width: 12px;
 }
-​
 ::-webkit-scrollbar-thumb{
     background-color: var(--Soft-Blue);
 }
-​
 section {
     padding: 2rem 9%;
 }
-​
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-​
 .heading{
     text-align: center;
     font-size: 2rem;
@@ -44,21 +36,15 @@ html{
     margin-top: 10rem;
     margin-bottom: 5rem;
 }
-​
-​
 .heading h1{
     padding-bottom: 2rem;
 }
-​
-​
 .heading p{
     max-width: 60rem;
     margin: auto;
     color: var(--Grayish-Blue);
     font-size: 1.7rem;
 }
-​
-​
 .all-btn{
     padding: 1rem 3rem;
     font-size: 1.5rem;
@@ -66,14 +52,11 @@ html{
     border-radius: .5rem;
     color: #fff;
 }
-​
 .all-btn:hover{
     background-color: transparent;
     color: var(--Soft-Blue);
     border: 2px solid var(--Soft-Blue);
 }
-​
-​
 :root{
     --Soft-Blue: hsl(231, 69%, 60%);
     --Soft-Red: hsl(0, 94%, 66%);
@@ -83,8 +66,6 @@ html{
     --text-shadow: .4rem .4rem  0 rgba(0, 0, 0, .2);
     --border: .2rem  solid var(--green);
 }
-​
-​
 /* navbar sections starts */
 .header{
     padding: 3rem 9%;
@@ -99,38 +80,28 @@ html{
     background-color: #fff;
     box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, .1);
 }
-​
-​
 .header .logo{
     cursor: pointer;
 }
-​
-​
 .header .navbar a{
     margin-left: 2rem;
     font-size: 1.7rem;
     text-transform: uppercase;
 }
-​
-​
 .header .navbar a:hover{
     color: var(--Soft-Red);
 }
-​
-​
 .header .navbar .btn{
     padding: .6rem 3rem;
     background-color: var(--Soft-Red);
     color: #fff;
     border-radius: .5rem;
 }
-​
 .header .navbar .btn:hover{
     color: var(--Soft-Red);
     background-color: transparent;
     border: 2px solid var(--Soft-Red);
 }
-​
 #menu-btn{
     padding: 1rem 1rem;
     background-color: #eee;
@@ -140,14 +111,7 @@ html{
     cursor: pointer;
     display: none;
 }
-​
-​
-​
 /* Media Queries */
-​
-​
-​
-​
 @media (max-width: 991px){
     html{
         font-size: 55%;
@@ -155,14 +119,11 @@ html{
     .header{
         padding: 2rem;
     }
-    
 }
-​
 @media (max-width: 768px){
     #menu-btn{
         display: initial;
     }
-​
     .header .navbar{
         position: absolute;
         top: 115%;
@@ -175,11 +136,9 @@ html{
         transform: scale(0);
         transform-origin: top right;
     }
-​
     .header .navbar.active{
         transform: scale(1);
     }
-​
     .header .navbar a{
         margin: 2.5rem;
         text-align: center;
@@ -187,18 +146,13 @@ html{
         font-size: 2rem;
     }
 }
-​
-​
 @media (max-width: 450px){
     html{
         font-size: 50%;
     }
 }
 /* navbar sections ends */
-​
-​
 /* home section starts  */
-​
 .home{
     padding-top: 15rem;
     display: flex;
@@ -207,30 +161,21 @@ html{
     /* main property for responsiveness */
     gap: 1.5rem;
 }
-​
-​
 .home .image{
     flex: 1 1 45rem;
 }
-​
-​
 .home .image img{
     width: 100%;
     margin-top: 5rem;
 }
-​
-​
 .home .content{
     flex: 1 1 45rem;
 }
-​
-​
 .home .content h1{
     font-size: 4.5rem;
     padding-block-end: 1rem 0;
     color: var(--Very-Dark-Blue);
 }
-​
 .home .content p{
     font-size: 1.7rem;
     padding: 1rem 0;
@@ -238,7 +183,6 @@ html{
     color: var(--Grayish-Blue);
     padding-bottom: 4rem;
 }
-​
 .home .content .home-btn{
     padding: 1.3rem 2rem;
     background-color: #fff;
@@ -248,23 +192,13 @@ html{
     border: 2px solid var(--Soft-Blue);
     border-radius: .5rem;
 }
-​
-​
 .home .content .home-btn:hover{
     background-color: var(--Soft-Blue);
     box-shadow: none;
     color: #fff;
 }
-​
-​
-​
-​
 /* home section ends */
-​
-​
-​
 /* features section starts  */
-​
 .features .row{
     display: flex;
     align-items: center;
@@ -272,30 +206,20 @@ html{
     gap: 5rem;
     margin: 3rem 0;
 }
-​
 .features .row .image{
     flex: 1 1 45rem;
 }
-​
-​
 .features .row .image img{
     width: 100%;
 }
-​
-​
-​
 .features .row .content{
     flex: 1 1 45rem;
 }
-​
-​
 .features .row .content h1{
     font-size: 4rem;
     padding: 1rem 0;
     color: var(--Very-Dark-Blue);
 }
-​
-​
 .features .row .content p{
     font-size: 1.7rem;
     padding: 1rem 0;
@@ -303,8 +227,6 @@ html{
     padding-bottom: 4rem;
 }
 /* features section ends */
-​
-​
 /* about section starts  */
 .about{
     padding-top: 15rem;
@@ -314,30 +236,21 @@ html{
     /* main property for responsiveness */
     gap: 1.5rem;
 }
-​
-​
 .about .image{
     flex: 1 1 45rem;
 }
-​
-​
 .about .image img{
     width: 50%;
     margin-top: 5rem;
 }
-​
-​
 .about .content{
     flex: 1 1 45rem;
 }
-​
-​
 .about .content h1{
     font-size: 4.5rem;
     padding-block-end: 1rem 0;
     color: var(--Very-Dark-Blue);
 }
-​
 .about .content p{
     font-size: 1.7rem;
     padding: 1rem 0;
@@ -345,7 +258,6 @@ html{
     color: var(--Grayish-Blue);
     padding-bottom: 4rem;
 }
-​
 .about .content .home-btn{
     padding: 1.3rem 2rem;
     background-color: #fff;
@@ -355,18 +267,11 @@ html{
     border: 2px solid var(--Soft-Blue);
     border-radius: .5rem;
 }
-​
-​
 .about .content .home-btn:hover{
     background-color: var(--Soft-Blue);
     box-shadow: none;
     color: #fff;
 }
-​
-​
-​
-​
-​
 .predict{
     padding-top: 15rem;
     display: flex;
@@ -375,30 +280,21 @@ html{
     /* main property for responsiveness */
     gap: 1.5rem;
 }
-​
-​
 .predict .image{
     flex: 1 1 45rem;
 }
-​
-​
 .predict .image img{
     width: 100%;
     margin-top: 5rem;
 }
-​
-​
 .predict .content{
     flex: 1 1 45rem;
 }
-​
-​
 .predict .content h1{
     font-size: 4.5rem;
     padding-block-end: 1rem 0;
     color: var(--Very-Dark-Blue);
 }
-​
 .predict .content p{
     font-size: 1.7rem;
     padding: 1rem 0;
@@ -406,7 +302,6 @@ html{
     color: var(--Grayish-Blue);
     padding-bottom: 4rem;
 }
-​
 .predict .content .home-btn{
     padding: 1.3rem 2rem;
     background-color: #fff;
@@ -416,46 +311,35 @@ html{
     border: 2px solid var(--Soft-Blue);
     border-radius: .5rem;
 }
-​
-​
 .predict .content .home-btn:hover{
     background-color: var(--Soft-Blue);
     box-shadow: none;
     color: #fff;
 }
-​
-​
-​
-
 /* footer section starts */
 .footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     gap:2rem;
 }
-
 .footer .box-container .box h3{
     font-size: 2.5rem;
     color:var(--black);
     padding: 1rem 0;
 }
-
 .footer .box-container .box a{
     display: block;
     font-size: 1.5rem;
     color:var(--light-color);
     padding: 1rem 0;
 }
-
 .footer .box-container .box a i{
     padding-right: .5rem;
     color:var(--green);
 }
-
 .footer .box-container .box a:hover i{
     padding-right:1rem;
 }
-
 .footer .credit{
     padding: 1rem;
     padding-top: 2rem;
@@ -465,7 +349,6 @@ html{
     color: #000;
     border-top: .1rem solid rgba(0, 0, 0, .1);
 }
-
 .footer .credit span{
     color: var(--Soft-Red);
     cursor: pointer;
@@ -474,5 +357,4 @@ html{
     text-decoration: underline;
     color: darkorange;
 }
-
 /* footer section ends */
